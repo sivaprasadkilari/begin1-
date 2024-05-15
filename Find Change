@@ -1,0 +1,21 @@
+x=int(input(""))
+y=int(input(""))
+z=int(input(""))
+def minimum_coins(x, y, z):
+    max_5_rupee_coins = min(y, z // 5)
+    
+    remaining_amount = z - (max_5_rupee_coins * 5)
+    
+    if remaining_amount <= x:
+        return remaining_amount, max_5_rupee_coins
+    else:
+        return -1
+
+
+result = minimum_coins(x, y, z)
+if result == -1:
+    print("-1")
+else:
+    one_rupee_coins, five_rupee_coins = result
+    print(one_rupee_coins)
+    print(five_rupee_coins)
