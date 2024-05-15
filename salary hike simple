@@ -1,0 +1,10 @@
+a=int(input(""))
+b=int(input(""))
+if b==3:
+    print(int(a+(a*0.15)));
+elif b==4:
+    print(int(a+(a*0.07)));
+elif b==5:
+    print(int(a+(a*0.05)));
+else:
+    print(a);
